@@ -1,0 +1,36 @@
+﻿@model BlowOut.Models.Instrument
+@{
+    ViewBag.Title = "Instrument";
+}
+
+<h2>@Model.name</h2>
+<div class="row">
+
+    <div class="col-lg-8">
+        <img src="@Model.imageSource">
+    </div>
+
+    <div class="col-lg-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>New: @Model.newPrice</p>
+                <p>Old: @Model.oldPrice</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                    <p>
+                        After 18 months, client owns instrument. If returned at any time before 3 month period, there will be a $200 re-stocking fee
+                        and all equity in the instrument will be forfeited.
+                    </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <br />
+            <br />
+
+
+
+

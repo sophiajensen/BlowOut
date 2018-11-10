@@ -1,0 +1,25 @@
+﻿@model List<BlowOut.Models.Instrument>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Rentals</h2>
+
+<br />
+<br />
+
+<row>
+    @foreach (var instrument in Model)
+    {
+        <div class="col-lg-4" style="padding:10px">
+            <a href='@Url.Action("Instrument", "Rentals", new { name = instrument.name, imageSource = instrument.imageSource, newPrice = instrument.newPrice, oldPrice = instrument.oldPrice })'>
+                <img src="@instrument.imageSource" />
+            </a>
+        </div>
+    }
+</row>
+<br />
+<br />
+<br />
+
